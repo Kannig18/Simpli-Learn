@@ -1,0 +1,33 @@
+ARITHMETIC CALCULATOR
+
+
+
+packagecom.Akanksha.Training;
+
+importjava.util.Scanner;
+
+publicclassArthmaticCalculator {
+	publicstaticvoidmain(String[] args) {
+		// TODO Auto-generated method stub
+//		double Ans;
+		Scanner sc=newScanner(System.in);
+		System.out.println("enter the two numbers");
+		intfirstnum=sc.nextInt();
+		intsecnum= sc.nextInt();
+		System.out.println("Enter the operator ");
+		charop=sc.next().charAt(0);
+		doubleAns=0;
+
+		switch(op){
+		case'+': Ans=firstnum+secnum;
+		break;
+		case'-':Ans=firstnum-secnum;
+		break;
+		case'*': Ans=firstnum*secnum;
+		break;
+		case'/':Ans=firstnum/secnum;
+		break;
+		}
+		System.out.println("the answer is " +Ans);
+	}
+}

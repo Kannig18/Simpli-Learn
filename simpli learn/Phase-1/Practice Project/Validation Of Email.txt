@@ -1,0 +1,50 @@
+VALIDATION OF EMAIL ID
+
+
+
+packagecom.Akanksha.Training;
+
+importjava.util.ArrayList;
+importjava.util.List;
+importjava.util.Scanner;
+importjava.util.regex.Matcher;
+importjava.util.regex.Pattern;
+
+
+
+publicclassValidationOfEmail {
+	
+	
+		publicstaticbooleanisValidEmail(String email) {
+			   String regex = "^(.+)@(.+)$";
+			//initialize the Pattern object
+		       Pattern pattern = Pattern.compile(regex);
+		       Matcher matcher = pattern.matcher(email);
+		returnmatcher.matches();
+
+		
+		   }
+
+		publicstaticvoidmain(String[] args) {
+		       List<String>emails = newArrayList<String>();
+		// valid email addresses
+		emails.add("hariharan@.com");
+		emails.add("harigadhe@example.com");
+		emails.add("hari@example.me.org");
+		//invalid email addresses
+		emails.add("raghu.example.com");
+		emails.add("rahul..bob@example.com");
+		emails.add("aishu@.example.com");
+
+		for (String value :emails) {
+		System.out.println("The Email address " + value + " is " + (isValidEmail(value) ?"valid" :"invalid"));
+		       }
+		
+		System.out.println("Enter any email address to check");
+		       Scanner sc = newScanner(System.in);
+		       String input = sc.nextLine();
+		System.out.println("The Email address " + input + " is " + (isValidEmail(input) ?"valid" :"invalid"));
+		
+		   }
+		
+}
